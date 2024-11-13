@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- [Previous head section remains exactly the same until the style block] -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,68 +13,195 @@
     body {
       font-family: 'Poppins', sans-serif;
     }
-    .impact-section {
+    .bg-goldsmith {
       background-color: #E7B252;
+    }
+    .bg-custom-blue {
+      background-color: #359395;
+    }
+    .text-goldsmith {
+      color: #E7B252;
+    }
+    .text-custom-blue {
+      color: #359395;
+    }
+    .hover\:bg-goldsmith:hover {
+      background-color: #E7B252;
+    }
+    .hover\:bg-custom-blue:hover {
+      background-color: #359395;
+    }
+    .hover\:text-goldsmith:hover {
+      color: #E7B252;
+    }
+    .hover\:text-custom-blue:hover {
+      color: #359395;
+    }
+    .custom-gradient {
+      background: linear-gradient(135deg, #359395 0%, #E7B252 100%);
+    }
+    .border-custom-blue {
+      border-color: #359395;
+    }
+    .border-goldsmith {
+      border-color: #E7B252;
+    }
+    /* Timeline specific styles */
+    .timeline-connector {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #359395;
+      z-index: -1;
+    }
+    .timeline-item {
+      position: relative;
+      background: white;
+      z-index: 1;
+    }
+    .timeline-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
+<!-- [Previous navigation and hero sections remain exactly the same] -->
   <!-- Navigation Bar -->
   <nav class="bg-white shadow-lg">
     <div class="container mx-auto px-4 lg:px-0">
       <div class="flex justify-between items-center py-2">
         <img src="/api/placeholder/100/100" alt="Savannah Seritech Logo" class="h-12">
         <div class="flex space-x-8">
-          <a href="#" class="text-gray-800 hover:text-green-500 font-semibold">Home</a>
-          <a href="#" class="text-gray-800 hover:text-green-500">Opportunity</a>
-          <a href="#" class="text-gray-800 hover:text-green-500">Vision</a>
-          <a href="#" class="text-gray-800 hover:text-green-500">Impact</a>
-          <a href="#" class="text-gray-800 hover:text-green-500">Join Us</a>
+          <a href="#" class="text-gray-800 hover:text-custom-blue font-semibold">Home</a>
+          <a href="#" class="text-gray-800 hover:text-custom-blue">Opportunity</a>
+          <a href="#" class="text-gray-800 hover:text-custom-blue">Vision</a>
+          <a href="#" class="text-gray-800 hover:text-custom-blue">Impact</a>
+          <a href="#" class="text-gray-800 hover:text-custom-blue">Join Us</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="bg-gradient-to-r from-green-400 to-blue-500 text-white py-20">
+  <div class="custom-gradient text-white py-20">
     <div class="container mx-auto px-4 lg:px-0">
       <h1 class="text-5xl font-bold mb-4">Savannah Seritech</h1>
       <p class="text-xl mb-8">Unraveling Kenya's Potential: Silk Farming for Sustainable Growth</p>
-      <a href="#" class="bg-white text-green-500 px-6 py-3 rounded-full hover:bg-gray-200 transition-colors">Join Us</a>
+      <a href="#" class="bg-white text-custom-blue px-6 py-3 rounded-full hover:bg-goldsmith hover:text-white transition-colors">Join Us</a>
     </div>
   </div>
 
+  <!-- New Timeline Section -->
+  <div class="bg-gray-50 py-20">
+    <div class="container mx-auto px-4 lg:px-0">
+      <h2 class="text-3xl font-bold mb-12 text-center text-custom-blue">Our Journey</h2>
+      <div class="relative">
+        <div class="timeline-connector"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Ideation -->
+          <div class="timeline-item p-6 rounded-lg shadow-lg">
+            <div class="timeline-dot bg-custom-blue mb-4"></div>
+            <h3 class="text-2xl font-bold mb-4 text-custom-blue">Ideation</h3>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-goldsmith mr-2"></div>
+                <p>Established Kenya's Superior climatic conditions</p>
+              </div>
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-goldsmith mr-2"></div>
+                <p>Established labor availability in Kenya</p>
+              </div>
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-goldsmith mr-2"></div>
+                <p>Established great unit economics</p>
+              </div>
+            </div>
+            <div class="mt-4 text-sm text-custom-blue font-semibold">Completed</div>
+          </div>
+
+          <!-- Build -->
+          <div class="timeline-item p-6 rounded-lg shadow-lg">
+            <div class="timeline-dot bg-goldsmith mb-4"></div>
+            <h3 class="text-2xl font-bold mb-4 text-goldsmith">Build</h3>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-custom-blue mr-2"></div>
+                <p>Achieved an FCR of 4</p>
+              </div>
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-custom-blue mr-2"></div>
+                <p>Onboarded 6 farmer partners</p>
+              </div>
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-custom-blue mr-2"></div>
+                <p>Built a 200,000 worms rearing hub</p>
+              </div>
+            </div>
+            <div class="mt-4 text-sm text-goldsmith font-semibold">In Progress</div>
+          </div>
+
+          <!-- Scale (2025) -->
+          <div class="timeline-item p-6 rounded-lg shadow-lg bg-gray-50">
+            <div class="timeline-dot bg-gray-300 mb-4"></div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-600">Scale (2025)</h3>
+            <div class="space-y-3 text-gray-600">
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-gray-400 mr-2"></div>
+                <p>Onboard 50 farmers by 2025</p>
+              </div>
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-gray-400 mr-2"></div>
+                <p>Plant 100 acres of mulberry farm</p>
+              </div>
+              <div class="flex items-start">
+                <div class="w-2 h-2 mt-2 rounded-full bg-gray-400 mr-2"></div>
+                <p>Eventually reach 100,000 farmers</p>
+              </div>
+            </div>
+            <div class="mt-4 text-sm text-gray-500 font-semibold">Not Started</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- [Rest of the previous sections remain exactly the same] -->
   <div class="container mx-auto px-4 lg:px-0 py-16">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <div>
-        <h2 class="text-3xl font-bold mb-4">The Opportunity</h2>
+        <h2 class="text-3xl font-bold mb-4 text-custom-blue">The Opportunity</h2>
         <p class="mb-6">Global raw silk market value exceeds US$20 billion, growing ~7% annually. Kenya holds a competitive advantage with its conducive climate and cost-effective labor.</p>
-        <a href="#" class="text-green-500 hover:underline">Learn More</a>
+        <a href="#" class="text-custom-blue hover:text-goldsmith">Learn More</a>
       </div>
       <div>
-        <h2 class="text-3xl font-bold mb-4">Our Vision</h2>
+        <h2 class="text-3xl font-bold mb-4 text-custom-blue">Our Vision</h2>
         <p class="mb-6">To pioneer a globally competitive, high-quality, and sustainable raw silk production platform, fostering a 4x increase in livelihoods for 30,000 farmers.</p>
-        <a href="#" class="text-green-500 hover:underline">Discover Our Plan</a>
+        <a href="#" class="text-custom-blue hover:text-goldsmith">Discover Our Plan</a>
       </div>
     </div>
   </div>
 
-  <div class="impact-section py-16">
+  <div class="bg-gray-100 py-16">
     <div class="container mx-auto px-4 lg:px-0">
-      <h2 class="text-3xl font-bold mb-8 text-center">The Impact</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">The Impact</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="bg-white rounded-lg shadow-md p-6 text-center border-t-4 border-custom-blue">
           <img src="/api/placeholder/200/150" alt="Mulberry Trees" class="mb-4">
-          <h3 class="text-2xl font-bold mb-2">100 Million Trees</h3>
+          <h3 class="text-2xl font-bold mb-2 text-goldsmith">100 Million Trees</h3>
           <p>Absorbing 500 metric tons of CO2 annually, combating soil erosion, and enhancing soil fertility.</p>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="bg-white rounded-lg shadow-md p-6 text-center border-t-4 border-goldsmith">
           <img src="/api/placeholder/200/150" alt="Farmer Livelihoods" class="mb-4">
-          <h3 class="text-2xl font-bold mb-2">30,000 Farmers</h3>
+          <h3 class="text-2xl font-bold mb-2 text-custom-blue">30,000 Farmers</h3>
           <p>Quadrupling livelihoods and establishing Kenya as a leader in sustainable silk production.</p>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="bg-white rounded-lg shadow-md p-6 text-center border-t-4 border-custom-blue">
           <img src="/api/placeholder/200/150" alt="Circularity" class="mb-4">
-          <h3 class="text-2xl font-bold mb-2">Circular Economy</h3>
+          <h3 class="text-2xl font-bold mb-2 text-goldsmith">Circular Economy</h3>
           <p>Composting residue, repurposing frass and pupa, and embracing a holistic approach.</p>
         </div>
       </div>
@@ -81,27 +209,27 @@
   </div>
 
   <div class="container mx-auto px-4 lg:px-0 py-16">
-    <h2 class="text-3xl font-bold mb-8 text-center">Join Us</h2>
+    <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">Join Us</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div>
-        <h3 class="text-2xl font-bold mb-4">Pilot Project</h3>
+        <h3 class="text-2xl font-bold mb-4 text-goldsmith">Pilot Project</h3>
         <p class="mb-6">Our immediate priority is to initiate a pilot project on a 0.5-acre farm, raising 20,000 silkworms over two cycles within three months. Following this pilot phase, our objective is to enlist five farmers and secure contracts for 5T of raw silk.</p>
-        <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors">Get Involved</a>
+        <a href="#" class="bg-custom-blue text-white px-6 py-3 rounded-full hover:bg-goldsmith transition-colors">Get Involved</a>
       </div>
       <div>
-        <h3 class="text-2xl font-bold mb-4">What We Need</h3>
+        <h3 class="text-2xl font-bold mb-4 text-goldsmith">What We Need</h3>
         <p class="mb-6">We are actively seeking sericulture experts to establish a model pilot farm, market partners and funding partners to support our initial investment of $10,000.</p>
-        <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors">Contact Us</a>
+        <a href="#" class="bg-custom-blue text-white px-6 py-3 rounded-full hover:bg-goldsmith transition-colors">Contact Us</a>
       </div>
     </div>
   </div>
 
-  <footer class="bg-gray-800 text-white py-8">
+  <footer class="bg-custom-blue text-white py-8">
     <div class="container mx-auto px-4 lg:px-0 flex justify-between items-center">
       <p>&copy; 2023 Seritech Savannah. All rights reserved.</p>
       <div>
-        <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
-        <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+        <a href="#" class="text-gray-200 hover:text-goldsmith mr-4">Privacy Policy</a>
+        <a href="#" class="text-gray-200 hover:text-goldsmith">Terms of Service</a>
       </div>
     </div>
   </footer>
