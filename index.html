@@ -53,20 +53,19 @@
 <body>
     <!-- Navigation Bar -->
   <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-    <div class="container mx-auto px-4 lg:px-0">
-      <div class="flex justify-between items-center py-2">
-        <img src="/api/placeholder/100/100" alt="Savannah Seritech Logo" class="h-12">
-        <div class="flex space-x-8">
-          <a href="#home" class="text-gray-800 hover:text-goldsmith font-semibold transition-colors">Home</a>
-          <a href="#opportunity" class="text-gray-800 hover:text-goldsmith transition-colors">Opportunity</a>
-          <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Solution</a>
-          <a href="#impact" class="text-gray-800 hover:text-goldsmith transition-colors">Impact</a>
-          <a href="#traction" class="text-gray-800 hover:text-goldsmith transition-colors">Traction</a>
-          <a href="#team" class="text-gray-800 hover:text-goldsmith transition-colors">Join Us</a>
-        </div>
+  <div class="container mx-auto px-4 lg:px-0">
+    <div class="flex justify-between items-center py-2">
+      <img src="/api/placeholder/100/100" alt="Savannah Seritech Logo" class="h-12">
+      <div class="flex space-x-8">
+        <a href="#home" class="text-gray-800 hover:text-goldsmith font-semibold transition-colors">Home</a>
+        <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Solution</a>
+        <a href="#impact" class="text-gray-800 hover:text-goldsmith transition-colors">Impact</a>
+        <a href="#traction" class="text-gray-800 hover:text-goldsmith transition-colors">Traction</a>
+        <button onclick="openModal()" class="text-gray-800 hover:text-goldsmith transition-colors">Sign Up</button>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Signup Modal -->
   <div id="signupModal" class="modal">
@@ -100,7 +99,7 @@
   </div>
 
   <!-- Hero Section with Background Image -->
-  <div class="relative">
+  <div id="Home" class="relative">
     <img src="https://github.com/Testscrum/image-repository/blob/main/Cocoons.JPG?raw=true" alt="Description of the image" class="w-full h-96 object-cover">
     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
       <div class="container mx-auto px-4 lg:px-0 text-white">
@@ -154,7 +153,7 @@
   </div>
 
  <!-- Our Solution Section with Gradient -->
-  <div class="py-16 hero-gradient">
+  <div id="solution" class="py-16 hero-gradient">
     <div class="container mx-auto px-4 lg:px-0">
       <h2 class="text-3xl font-bold mb-8 text-center text-white">Our Solution</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -175,7 +174,7 @@
   </div>
 
   <!-- Impact Section with Photos -->
-  <div class="bg-white py-16">
+  <div id="Impact" class="bg-white py-16">
     <div class="container mx-auto px-4 lg:px-0">
       <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">The Impact</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -201,7 +200,7 @@
   </div>
 
     <!-- Traction Section -->
-  <div class="hero-gradient py-16">
+  <div id="Traction" class="hero-gradient py-16">
     <div class="container mx-auto px-4 lg:px-0">
       <h2 class="text-3xl font-bold mb-8 text-center text-white">Our Traction</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
