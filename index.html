@@ -51,21 +51,53 @@
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="bg-white shadow-lg">
+    <!-- Navigation Bar -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
     <div class="container mx-auto px-4 lg:px-0">
       <div class="flex justify-between items-center py-2">
-        <img src="https://github.com/Testscrum/image-repository/blob/main/Logos%20(2).png?raw=true" alt="Description of the image" width="150" height="150">
+        <img src="/api/placeholder/100/100" alt="Savannah Seritech Logo" class="h-12">
         <div class="flex space-x-8">
-          <a href="#" class="text-gray-800 hover:text-custom-blue font-semibold">Home</a>
-          <a href="#" class="text-gray-800 hover:text-custom-blue">Opportunity</a>
-          <a href="#" class="text-gray-800 hover:text-custom-blue">Solution</a>
-          <a href="#" class="text-gray-800 hover:text-custom-blue">Impact</a>
-          <a href="#" class="text-gray-800 hover:text-custom-blue">Join Us</a>
+          <a href="#home" class="text-gray-800 hover:text-goldsmith font-semibold transition-colors">Home</a>
+          <a href="#opportunity" class="text-gray-800 hover:text-goldsmith transition-colors">Opportunity</a>
+          <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Solution</a>
+          <a href="#impact" class="text-gray-800 hover:text-goldsmith transition-colors">Impact</a>
+          <a href="#traction" class="text-gray-800 hover:text-goldsmith transition-colors">Traction</a>
+          <a href="#team" class="text-gray-800 hover:text-goldsmith transition-colors">Join Us</a>
         </div>
       </div>
     </div>
   </nav>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal">
+    <div class="m-auto bg-white p-8 rounded-lg max-w-md w-full mx-4">
+      <h2 class="text-2xl font-bold mb-6 text-custom-blue">Join Our Farming Community</h2>
+      <form id="farmerSignupForm" onsubmit="submitForm(event)">
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Full Name</label>
+            <input type="text" name="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Location</label>
+            <input type="text" name="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Land Acreage</label>
+            <input type="number" name="acreage" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Phone Number</label>
+            <input type="tel" name="phone" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          </div>
+          <div class="flex justify-end space-x-4">
+            <button type="button" onclick="closeModal()" class="px-4 py-2 text-gray-600 hover:text-gray-800">Cancel</button>
+            <button type="submit" class="px-4 py-2 bg-custom-blue text-white rounded hover:bg-goldsmith transition-colors">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- Hero Section with Background Image -->
   <div class="relative">
@@ -197,7 +229,7 @@
     <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">Join Our Mission</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="justify-self-end">
-        <img src="https://github.com/Testscrum/image-repository/blob/main/Team.JPG?raw=true" alt="Savannah Seritech Team" class="rounded-lg shadow-lg w-64 h-64 object-cover">
+        <img src="https://github.com/Testscrum/image-repository/blob/main/Team.JPG?raw=true" alt="Savannah Seritech Team" class="rounded-lg shadow-lg w-80 h-64 object-cover">
       </div>
       <div>
         <h3 class="text-2xl font-bold mb-4 text-goldsmith">What We Need</h3>
