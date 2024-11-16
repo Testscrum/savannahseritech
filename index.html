@@ -72,16 +72,20 @@
     <form id="signupForm">
       <div class="space-y-4">
         <div>
-          <label class="block text-sm font-medium">Full Name</label>
-          <input type="text" id="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Email</label>
-          <input type="email" id="email" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Location</label>
-          <input type="text" id="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+            <label class="block text-sm font-medium mb-1">Full Name</label>
+            <input type="text" name="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Location</label>
+            <input type="text" name="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Land Acreage</label>
+            <input type="number" name="acreage" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Phone Number</label>
+            <input type="tel" name="phone" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
         </div>
         <div class="flex justify-end space-x-4">
           <button type="button" onclick="closeModal()" class="text-gray-600 hover:text-gray-800">Close</button>
