@@ -54,14 +54,22 @@
 <!-- Navigation Bar -->
 <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
   <div class="container mx-auto px-4 lg:px-0">
-    <div class="flex justify-between items-center py-2">
-    <img src="https://github.com/Testscrum/image-repository/blob/main/Logos%20(2).png?raw=true" alt="Savannah Seritech Logo" style="width: 120px; height: 80px; position: absolute; left: 6;">
+    <div class="flex items-center justify-between py-2">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center">
+        <img src="https://github.com/Testscrum/image-repository/blob/main/Logos%20(2).png?raw=true" 
+             alt="Savannah Seritech Logo" 
+             style="width: 120px; height: 80px;" 
+             class="mr-4">
+      </a>
+
+      <!-- Navigation Links -->
       <div class="flex space-x-8">
         <a href="#home" class="text-gray-800 hover:text-goldsmith font-semibold transition-colors">Home</a>
         <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Solution</a>
-        <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Impact</a>
-        <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Traction</a>
-        <button onclick="openModal()" class="text-gray-800 hover:text-goldsmith transition-colors">Sign Up</button>
+        <a href="#impact" class="text-gray-800 hover:text-goldsmith transition-colors">Impact</a>
+        <a href="#traction" class="text-gray-800 hover:text-goldsmith transition-colors">Traction</a>
+        <button onclick="openModal()" class="bg-custom-blue text-white px-4 py-2 rounded hover:bg-goldsmith transition-colors">Sign Up</button>
       </div>
     </div>
   </div>
@@ -73,23 +81,32 @@
     <h2 class="text-2xl font-bold text-custom-blue mb-4">Join Us</h2>
     <form id="signupForm">
       <div class="space-y-4">
+        <!-- Full Name -->
         <div>
-            <label class="block text-sm font-medium mb-1">Full Name</label>
-            <input type="text" name="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">Location</label>
-            <input type="text" name="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">Land Acreage</label>
-            <input type="number" name="acreage" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">Phone Number</label>
-            <input type="tel" name="phone" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+          <label class="block text-sm font-medium mb-1" for="name">Full Name</label>
+          <input type="text" id="name" name="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
         </div>
-        <div class="flex justify-end space-x-4">
+
+        <!-- Location -->
+        <div>
+          <label class="block text-sm font-medium mb-1" for="location">Location</label>
+          <input type="text" id="location" name="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+        </div>
+
+        <!-- Land Acreage -->
+        <div>
+          <label class="block text-sm font-medium mb-1" for="acreage">Land Acreage</label>
+          <input type="number" id="acreage" name="acreage" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+          <label class="block text-sm font-medium mb-1" for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex justify-end space-x-4 mt-4">
           <button type="button" onclick="closeModal()" class="text-gray-600 hover:text-gray-800">Close</button>
           <button type="submit" class="bg-custom-blue text-white px-4 py-2 rounded hover:bg-goldsmith">Submit</button>
         </div>
@@ -97,7 +114,7 @@
     </form>
   </div>
 </div>
-
+  
   <!-- Hero Section with Background Image -->
   <div id="home" class="relative">
     <img src="https://github.com/Testscrum/image-repository/blob/main/Cocoons.JPG?raw=true" alt="Description of the image" class="w-full h-96 object-cover">
