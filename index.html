@@ -51,52 +51,46 @@
   </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-lg fixed w-full top-0 z-50">
   <div class="container mx-auto px-4 lg:px-0">
     <div class="flex justify-between items-center py-2">
       <img src="/api/placeholder/100/100" alt="Savannah Seritech Logo" class="h-12">
       <div class="flex space-x-8">
         <a href="#home" class="text-gray-800 hover:text-goldsmith font-semibold transition-colors">Home</a>
         <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Solution</a>
-        <a href="#impact" class="text-gray-800 hover:text-goldsmith transition-colors">Impact</a>
-        <a href="#traction" class="text-gray-800 hover:text-goldsmith transition-colors">Traction</a>
         <button onclick="openModal()" class="text-gray-800 hover:text-goldsmith transition-colors">Sign Up</button>
       </div>
     </div>
   </div>
 </nav>
 
-  <!-- Signup Modal -->
-  <div id="sign up" class="modal">
-    <div class="m-auto bg-white p-8 rounded-lg max-w-md w-full mx-4">
-      <h2 class="text-2xl font-bold mb-6 text-custom-blue">Join Our Farming Community</h2>
-      <form id="farmerSignupForm" onsubmit="submitForm(event)">
-        <div class="space-y-4">
-          <div>
-            <label class="block text-sm font-medium mb-1">Full Name</label>
-            <input type="text" name="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">Location</label>
-            <input type="text" name="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">Land Acreage</label>
-            <input type="number" name="acreage" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">Phone Number</label>
-            <input type="tel" name="phone" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-          </div>
-          <div class="flex justify-end space-x-4">
-            <button type="button" onclick="closeModal()" class="px-4 py-2 text-gray-600 hover:text-gray-800">Cancel</button>
-            <button type="submit" class="px-4 py-2 bg-custom-blue text-white rounded hover:bg-goldsmith transition-colors">Submit</button>
-          </div>
+<!-- Sign-Up Modal -->
+<div id="signupModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
+  <div class="bg-white rounded-lg w-full max-w-lg p-6">
+    <h2 class="text-2xl font-bold text-custom-blue mb-4">Join Us</h2>
+    <form id="signupForm">
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium">Full Name</label>
+          <input type="text" id="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
         </div>
-      </form>
-    </div>
+        <div>
+          <label class="block text-sm font-medium">Email</label>
+          <input type="email" id="email" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Location</label>
+          <input type="text" id="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
+        </div>
+        <div class="flex justify-end space-x-4">
+          <button type="button" onclick="closeModal()" class="text-gray-600 hover:text-gray-800">Close</button>
+          <button type="submit" class="bg-custom-blue text-white px-4 py-2 rounded hover:bg-goldsmith">Submit</button>
+        </div>
+      </div>
+    </form>
   </div>
+</div>
 
   <!-- Hero Section with Background Image -->
   <div id="home" class="relative">
@@ -105,7 +99,7 @@
       <div class="container mx-auto px-4 lg:px-0 text-white">
         <h1 class="text-5xl font-bold mb-4">Savannah Seritech</h1>
         <p class="text-xl mb-8">Unraveling Kenya's Potential: Empowering livelihoods through our sustainable seritech platform</p>
-        <a href="#" class="bg-white text-custom-blue px-6 py-3 rounded-full hover:bg-goldsmith hover:text-white transition-colors">Sign Up</a>
+        <button onclick="openModal()" class="bg-white text-custom-blue px-6 py-3 rounded-full hover:bg-goldsmith hover:text-white transition-colors">Sign Up</button>
       </div>
     </div>
   </div>
@@ -270,6 +264,34 @@
         </div>
       </div>
     </div>
+    <!-- JavaScript for Modal -->
+  <script>
+    // Open the modal
+function openModal() {
+  document.getElementById('signupModal').classList.remove('hidden');
+}
+
+// Close the modal
+function closeModal() {
+  document.getElementById('signupModal').classList.add('hidden');
+}
+
+// Form validation and submission
+document.getElementById('signupForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const location = document.getElementById('location').value.trim();
+
+  if (name && email && location) {
+    alert('Form submitted successfully!');
+    closeModal();
+  } else {
+    alert('Please fill all the fields.');
+  }
+});
+</script>
   </footer>
 </body>
 </html>
