@@ -45,25 +45,8 @@
     .border-goldsmith {
       border-color: #E7B252;
     }
-    .timeline-connector {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: #359395;
-      z-index: -1;
-    }
-    .timeline-item {
-      position: relative;
-      background: white;
-      z-index: 1;
-    }
-    .timeline-dot {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      margin: 0 auto;
+    .hero-gradient {
+      background: linear-gradient(to right, #359395, #97AB63, #E7B252);
     }
   </style>
 </head>
@@ -138,10 +121,10 @@
     </div>
   </div>
 
-  <!-- Our Solution Section -->
-  <div class="bg-goldsmith-50 py-16">
-     <div class="container mx-auto px-4 lg:px-0 class="w-full h-20 bg-goldsmith">
-      <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">Our Solution</h2>
+ <!-- Our Solution Section with Gradient -->
+  <div class="py-16 hero-gradient">
+    <div class="container mx-auto px-4 lg:px-0">
+      <h2 class="text-3xl font-bold mb-8 text-center text-white">Our Solution</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-md">
           <h3 class="text-xl font-bold mb-4 text-goldsmith">Quality Inputs</h3>
@@ -160,9 +143,10 @@
   </div>
 
   <!-- Impact Section with Photos -->
-  <div class="bg-white py-16 overflow-x-auto">
-    <div class="container mx-auto px-4 lg:px-0 flex flex-col items-center space-y-12">
-      <div class="grid grid-cols-3 gap-8">
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4 lg:px-0">
+      <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">The Impact</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white rounded-lg shadow-md p-6 text-center border-t-4 border-custom-blue">
           <img src="https://github.com/Testscrum/image-repository/blob/main/Farmer.jpg?raw=true" alt="Environmental Impact" class="mx-auto w-40 h-40 object-cover rounded-lg">
           <h3 class="text-2xl font-bold mb-2 text-goldsmith">100 Million Trees</h3>
@@ -184,7 +168,31 @@
     </div>
   </div>
 
-  <!-- Join Us Section with Team Photo -->
+    <!-- Traction Section -->
+  <div class="hero-gradient py-16">
+    <div class="container mx-auto px-4 lg:px-0">
+      <h2 class="text-3xl font-bold mb-8 text-center text-white">Our Traction</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-4xl font-bold text-goldsmith mb-2">6</div>
+          <h3 class="text-xl font-bold mb-2">Farmer Partners</h3>
+          <p>Successfully onboarded and generating income</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-4xl font-bold text-goldsmith mb-2">200k</div>
+          <h3 class="text-xl font-bold mb-2">Silkworms</h3>
+          <p>Current rearing capacity in our hub</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-4xl font-bold text-goldsmith mb-2">4.0</div>
+          <h3 class="text-xl font-bold mb-2">FCR Achievement</h3>
+          <p>Industry-leading feed conversion ratio</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Join Us Section with Team Photo -->
   <div class="container mx-auto px-4 lg:px-0 py-16">
     <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">Join Our Mission</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
