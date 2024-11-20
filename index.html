@@ -138,51 +138,10 @@
         <a href="#solution" class="text-gray-800 hover:text-goldsmith transition-colors">Solution</a>
         <a href="#impact" class="text-gray-800 hover:text-goldsmith transition-colors">Impact</a>
         <a href="#traction" class="text-gray-800 hover:text-goldsmith transition-colors">Traction</a>
-        <button onclick="openModal()" class="bg-custom-blue text-white px-4 py-2 rounded hover:bg-goldsmith transition-colors">Farmer Sign Up</button>
       </div>
     </div>
   </div>
 </nav>
-
-<!-- Sign-Up Modal -->
-<div id="signupModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
-  <div class="bg-white rounded-lg w-full max-w-lg p-6">
-    <h2 class="text-2xl font-bold text-custom-blue mb-4">Join Us</h2>
-    <form id="signupForm">
-      <div class="space-y-4">
-        <!-- Full Name -->
-        <div>
-          <label class="block text-sm font-medium mb-1" for="name">Full Name</label>
-          <input type="text" id="name" name="name" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-        </div>
-
-        <!-- Location -->
-        <div>
-          <label class="block text-sm font-medium mb-1" for="location">Location</label>
-          <input type="text" id="location" name="location" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-        </div>
-
-        <!-- Land Acreage -->
-        <div>
-          <label class="block text-sm font-medium mb-1" for="acreage">Land Acreage</label>
-          <input type="number" id="acreage" name="acreage" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-        </div>
-
-        <!-- Phone Number -->
-        <div>
-          <label class="block text-sm font-medium mb-1" for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required class="w-full p-2 border rounded focus:outline-none focus:border-custom-blue">
-        </div>
-
-        <!-- Buttons -->
-        <div class="flex justify-end space-x-4 mt-4">
-          <button type="button" onclick="closeModal()" class="text-gray-600 hover:text-gray-800">Close</button>
-          <button type="submit" class="bg-custom-blue text-white px-4 py-2 rounded hover:bg-goldsmith">Submit</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
   
   <!-- Hero Section with Background Image -->
   <div id="home" class="relative">
@@ -243,6 +202,18 @@
     </div>
   </div>
 </div>
+    
+  <!-- What is Sericulture -->
+    <div id="What is Sericulture" class="container mx-auto px-4 lg:px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-custom-blue">Understanding Sericiulture</h2>
+      <p class="mb-6 text-justify">Sericulture involves producing silk by rearing silkworms for ~30 days, from egg to cocoon harvesting for silk filament</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <img src="https://github.com/Testscrum/image-repository/blob/main/Cocoons.JPG?raw=true" alt="Description of the image" class="w-full h-96 object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-0 flex items-center">
+         </div>
+      </div>
+    </div>
+  </div>
 
  <!-- Our Solution Section with Gradient -->
   <div id="solution" class="py-16 hero-gradient">
